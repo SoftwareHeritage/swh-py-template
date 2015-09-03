@@ -22,3 +22,5 @@ coverage:
 .PHONY: check
 check:
 	$(FLAKE) $(FLAKEFLAGS) $(PKGDIR) $(EXTRA_DIRS)
+
+-include Makefile.local
