@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-export PYBUILD_NAME=<dot-separated-module-name>
+export PYBUILD_NAME=<dot-separated-module-name>  # example: swh.loader.pypi
 export PYBUILD_TEST_ARGS=--with-doctest -sva !db,!fs
 
 %:

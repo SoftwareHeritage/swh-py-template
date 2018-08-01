@@ -16,7 +16,7 @@ def parse_requirements():
 # Edit this part to match your module
 # full sample: https://forge.softwareheritage.org/diffusion/DCORE/browse/master/setup.py
 setup(
-    name='swh.<module-name>',
+    name='swh.<module-name>',  # example: swh.loader.pypi
     description='Software Heritage <Module\'s intent>',
     author='Software Heritage developers',
     author_email='swh-devel@inria.fr',

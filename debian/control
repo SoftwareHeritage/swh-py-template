@@ -1,4 +1,4 @@
-Source: <dash-separated-module-name>
+Source: <dash-separated-module-name>  # example: swh-loader-pypi
 Maintainer: Software Heritage developers <swh-devel@inria.fr>
 Section: python
 Priority: optional
@@ -13,7 +13,7 @@ Build-Depends: debhelper (>= 9),
 Standards-Version: 3.9.6
 Homepage: https://forge.softwareheritage.org/source/<phabricator short name>/
 
-Package: python3-<dot-separated-name-module>
+Package: python3-<dot-separated-name-module>  # example: python3-swh.loader.pypi
 Architecture: all
 Depends: ${misc:Depends}, ${python3:Depends}
 Description: Software Heritage <module-description>
