@@ -24,8 +24,8 @@ def parse_requirements(name=None):
     return requirements
 
 
-# Edit this part to match your module
-# full sample: https://forge.softwareheritage.org/diffusion/DCORE/browse/master/setup.py
+# Edit this part to match your module. full sample:
+# https://forge.softwareheritage.org/diffusion/DCORE/browse/master/setup.py
 setup(
     name='swh.<module-name>',  # example: swh.loader.pypi
     description='Software Heritage <Module\'s intent>',
@@ -37,6 +37,7 @@ setup(
     install_requires=parse_requirements() + parse_requirements('swh'),
     test_requires=parse_requirements('test'),
     setup_requires=['vcversioner'],
+    extras_require={'testing': parse_requirements('test')},
     vcversioner={},
     include_package_data=True,
 )
