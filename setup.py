@@ -53,11 +53,10 @@ setup(
     extras_require={'testing': parse_requirements('test')},
     vcversioner={},
     include_package_data=True,
-    entry_points={
-        'console_scripts': [  # cli tools provided by this package, eg.
-            # 'swh-my-command=swh.<module-name>.cli:main',
-            ]
-        },
+    entry_points='''
+        [swh.cli.subcommands]
+        <cli-name>=swh.<module>.cli:cli
+    ''',
     classifiers=[
         "Programming Language :: Python :: 3",
         "Intended Audience :: Developers",
