@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (C) 2019  The Software Heritage developers
+# Copyright (C) 2019-2020  The Software Heritage developers
 # See the AUTHORS file at the top-level directory of this distribution
 # License: GNU General Public License version 3, or any later version
 # See top-level LICENSE file for more information
@@ -50,9 +50,9 @@ setup(
     packages=find_packages(),  # packages's modules
     install_requires=parse_requirements() + parse_requirements("swh"),
     tests_require=parse_requirements("test"),
-    setup_requires=["vcversioner"],
+    setup_requires=["setuptools-scm"],
+    use_scm_version=True,
     extras_require={"testing": parse_requirements("test")},
-    vcversioner={},
     include_package_data=True,
     entry_points="""
         [swh.cli.subcommands]
