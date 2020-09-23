@@ -56,7 +56,7 @@ setup(
     include_package_data=True,
     entry_points="""
         [swh.cli.subcommands]
-        <cli-name>=swh.<module>.cli:cli
+        <cli-name>=swh.<module>.cli
     """,
     classifiers=[
         "Programming Language :: Python :: 3",

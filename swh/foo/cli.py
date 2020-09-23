@@ -1,16 +1,16 @@
 import click
 
-from swh.core.cli import CONTEXT_SETTINGS
+from swh.core.cli import CONTEXT_SETTINGS, swh as swh_cli_group
 
 
-@click.group(name="foo", context_settings=CONTEXT_SETTINGS)
+@swh_cli_group(name="foo", context_settings=CONTEXT_SETTINGS)
 @click.pass_context
-def cli(ctx):
+def foo_cli_group(ctx):
     """Foo main command.
     """
 
 
-@cli.command()
+@foo_cli_group.command()
 @click.option("--bar", help="Something")
 @click.pass_context
 def bar(ctx, bar):
