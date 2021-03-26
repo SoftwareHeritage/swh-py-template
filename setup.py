@@ -43,7 +43,7 @@ setup(
     name="swh.<module-name>",  # example: swh.loader.pypi
     description="Software Heritage <Module's intent>",
     long_description=long_description,
-    long_description_content_type="text/markdown",
+    long_description_content_type="text/x-rst",
     python_requires=">=3.7",
     author="Software Heritage developers",
     author_email="swh-devel@inria.fr",
