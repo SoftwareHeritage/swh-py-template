@@ -36,11 +36,11 @@ def parse_requirements(*names):
     return requirements
 
 
-# Edit this part to match your module.
+# Edit this part to match your module, replace foo by its name
 # Full sample:
 #   https://forge.softwareheritage.org/diffusion/DCORE/browse/master/setup.py
 setup(
-    name="swh.<module-name>",  # example: swh.loader.pypi
+    name="swh.foo",  # example: swh.loader.pypi
     description="Software Heritage <Module's intent>",
     long_description=long_description,
     long_description_content_type="text/x-rst",
@@ -57,7 +57,7 @@ setup(
     include_package_data=True,
     entry_points="""
         [swh.cli.subcommands]
-        <cli-name>=swh.<module>.cli
+        foo=swh.foo.cli
     """,
     classifiers=[
         "Programming Language :: Python :: 3",
