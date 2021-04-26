@@ -1,3 +1,5 @@
+.. _swh-py-template:
+
 .. include:: README.rst
 
 .. toctree::
