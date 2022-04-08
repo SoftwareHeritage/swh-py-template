@@ -7,8 +7,7 @@ from swh.core.cli import swh as swh_cli_group
 @swh_cli_group.group(name="foo", context_settings=CONTEXT_SETTINGS)
 @click.pass_context
 def foo_cli_group(ctx):
-    """Foo main command.
-    """
+    """Foo main command."""
 
 
 @foo_cli_group.command()
