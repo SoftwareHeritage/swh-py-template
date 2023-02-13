@@ -1,4 +1,4 @@
-.. _swh-py-template:
+.. _swh-foo:
 
 .. include:: README.rst
 
