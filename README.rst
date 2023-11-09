@@ -36,8 +36,7 @@ Create a new ``swh`` package
 
 That's it! You should have a working swh package ready to hack. It includes:
 
-- a ``tox.ini`` file so you can run directly ``tox`` in there (it should fail,
-  since the example test is an ``assert False`` one),
+- a ``tox.ini`` file so you can run directly ``tox`` in there,
 
 - a sphinx documentation template; you can run ``tox -e sphinx`` to build it,
 
