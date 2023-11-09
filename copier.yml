@@ -1,0 +1,44 @@
+_subdirectory: copier-template
+
+project_name:
+  type: str
+  help: What is your swh subpackage name? (it should be like swh.xxx)
+  validator: "{% if not (project_name.startswith('swh.')) %}Must start with 'swh.' {% endif %} "
+
+distribution_name:
+  type: str
+  default: "{{ project_name.replace('.', '-') }}"
+
+package_root:
+  type: str
+  default: "{{ project_name.replace('.', '/') }}"
+
+description:
+  type: str
+  help: Give a one-line description of your project. (It should probably contain “Software Heritage” unless it is more generic.)
+
+python_minimal_version:
+  type: str
+  help: What is the minimal version of Python this supports?
+  choices:
+    - 3.7
+    - 3.8
+    - 3.9
+    - 3.10
+    - 3.11
+    - 3.12
+
+readme_format:
+  type: str
+  help: What is the format of the README file?
+  choices:
+    - rst
+    - md
+
+have_cli:
+  type: bool
+  help: Does your package provide cli tools?
+
+have_workers:
+  type: bool
+  help: Does your package provide swh celery workers?

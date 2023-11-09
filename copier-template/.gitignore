@@ -7,5 +7,5 @@
 __pycache__
 build/
 dist/
-copier_template/docs/README.rst
-copier_template/docs/README.md
+docs/README.rst
+docs/README.md

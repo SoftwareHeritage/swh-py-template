@@ -1,7 +1,10 @@
 [tox]
-requires =
-  tox>4
-envlist=black,flake8,mypy,py3
+minversion = 4
+envlist =
+  black
+  flake8
+  mypy
+  py3
 
 [testenv]
 extras =
@@ -10,9 +13,15 @@ deps =
   pytest-cov
 commands =
   pytest --doctest-modules \
-         {envsitepackagesdir}/swh/foo \
-         --cov={envsitepackagesdir}/swh/foo \
-         --cov-branch {posargs}
+         --import-mode importlib \
+         --rootdir {envsitepackagesdir} \
+         --cov={envsitepackagesdir}/{{ package_root }} \
+         --cov-branch \
+         {envsitepackagesdir}/{{ package_root }} \
+         {posargs}
+# --rootdir and --import-mode are required to make tests that depends
+# on the test file to be a proper submodule of the swh namespace after
+# migration to PEP420 (implicit namespace).
 
 [testenv:black]
 skip_install = true

@@ -19,6 +19,16 @@ repos:
         name: Check source code spelling
         stages: [commit]
 
+  - repo: local
+    hooks:
+      - id: mypy
+        name: mypy
+        entry: mypy
+        args: [swh]
+        pass_filenames: false
+        language: system
+        types: [python]
+
   - repo: https://github.com/PyCQA/isort
     rev: 5.12.0
     hooks:
