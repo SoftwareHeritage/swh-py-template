@@ -20,6 +20,7 @@ description:
 python_minimal_version:
   type: str
   help: What is the minimal version of Python this supports?
+  default: "3.7"
   choices:
     - 3.7
     - 3.8
@@ -31,6 +32,7 @@ python_minimal_version:
 readme_format:
   type: str
   help: What is the format of the README file?
+  default: rst
   choices:
     - rst
     - md
@@ -38,7 +40,10 @@ readme_format:
 have_cli:
   type: bool
   help: Does your package provide cli tools?
+  default: true
 
 have_workers:
   type: bool
   help: Does your package provide swh celery workers?
+  default: false
+
