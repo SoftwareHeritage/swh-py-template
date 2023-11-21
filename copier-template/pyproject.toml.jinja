@@ -27,7 +27,7 @@ testing = {file = ["requirements.txt", "requirements-swh.txt", "requirements-tes
 {% if have_cli %}
 [project.entry-points."swh.cli.subcommands"]
 "{{project_name}}" = "{{project_name}}.cli"
-{% endif %}{% if have_cli %}
+{% endif %}{% if have_workers %}
 [project.entry-points."swh.workers"]
 "{{project_name}}" = "{{project_name}}:register_worker"
 {% endif %}
