@@ -20,7 +20,7 @@ description:
 python_minimal_version:
   type: str
   help: What is the minimal version of Python this supports?
-  default: "3.7"
+  default: "3.11"
   choices:
     - 3.7
     - 3.8
