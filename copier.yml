@@ -22,12 +22,13 @@ python_minimal_version:
   help: What is the minimal version of Python this supports?
   default: "3.11"
   choices:
-    - 3.7
-    - 3.8
-    - 3.9
-    - 3.10
-    - 3.11
-    - 3.12
+    - "3.7"
+    - "3.8"
+    - "3.9"
+    - "3.10"
+    - "3.11"
+    - "3.12"
+
 
 readme_format:
   type: str
