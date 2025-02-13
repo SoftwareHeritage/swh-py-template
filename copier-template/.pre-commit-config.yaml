@@ -27,7 +27,7 @@ repos:
     hooks:
       - id: codespell
         name: Check source code spelling
-        stages: [commit]
+        stages: [pre-commit]
       - id: codespell
         name: Check commit message spelling
         stages: [commit-msg]
